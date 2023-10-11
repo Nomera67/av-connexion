@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+// Fonts 
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+// Variables
+
+$main-color: #222CF2;
+$main-color-light: #226EF2;
+$dark-charcoal: #2C2C33;
+$light-background: #ffffff;
+
+
+// Reset CSS
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $dark-charcoal;
+}
