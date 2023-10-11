@@ -1,0 +1,9 @@
+.heroe{
+    &-container{
+        width: 100%;
+        height: 97vh;
+        display: grid;
+        place-items: center;
+        border: 1px solid green;
+    }
+}

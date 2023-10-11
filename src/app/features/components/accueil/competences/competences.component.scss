@@ -1,0 +1,9 @@
+.competences{
+    &-container{
+        width: 100%;
+        height: 50vh;
+        border: 1px solid red;
+        display: grid;
+        place-items: center;
+    }
+}

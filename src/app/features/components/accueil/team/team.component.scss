@@ -1,0 +1,9 @@
+.team{
+    &-container{
+        width: 100%;
+        height: 50vh;
+        border: 1px solid orange;
+        display: grid;
+        place-items: center;
+    }
+}

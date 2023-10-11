@@ -6,8 +6,11 @@ header, ul {
 
 header{
     height: 75px;
+    width: 100%;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
 }
 
 .nav{
