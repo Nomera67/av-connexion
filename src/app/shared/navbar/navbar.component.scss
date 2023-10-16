@@ -5,29 +5,82 @@ header, ul {
 }
 
 header{
-    height: 75px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    top: 0;
+    padding: 10px 0 0 0;
+}
+
+.header{
+    &-top{
+        height: 100px;
+    }
+    &-bottom{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $light-background;
+    }
+}
+
+.nav-bar.righted {
+    margin: 0;
+    padding-right: 0;
 }
 
 .nav{
+    &-bar{
+        margin: auto;
+        padding-right: 60px;
+    }
     &-list{
         gap: 2rem
     }
     &-links{
         font-size: 1rem;
+        font-weight: 500;
+        transition: all .25s ease;
         &:hover{
             color: $main-color;
         }
     }
     &-contact{
-        color: $main-color;
+        color: $light-background;
+        background-color: $main-color;
+        padding: 7px 15px;
+        border-radius: 15px;
+        border: 1px solid $main-color;
+        &:hover{
+            color: $main-color;
+            background-color: $light-background;
+        }
     }
+}
+
+.logo{
+    opacity: 0;
+}
+
+.logo-big{
+    height: 90px;
+}
+
+.visible{
+    opacity: 1;
+    transition: .25s all ease;
+    transition-delay: .25s;
+}
+
+.hidden{
+    opacity: 0;
+    transition: .5 all ease;
 }
 
 .logo > img{
     width: 60px;
 }
+
+

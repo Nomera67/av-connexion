@@ -1,25 +1,30 @@
-<header>
-    <div ngClass="logo">
-        <img src="../../../assets/icons/logo.jpg" alt="Logo AV-Connexion">
+<header id="heroe">
+    <div ngClass="header-top">
+        <img src="../../../assets/icons/logo-plein.png" alt="" ngClass="logo-big">
     </div>
-   
-    <nav ngClass="nav-bar">
-        <ul ngClass="nav-list">
-            <li ngClass="nav-item">
-                <a (click)="scrollToElement('heroe')" ngClass="nav-links">Accueil</a>
-            </li>
-            <li ngClass="nav-item">
-                <a (click)="scrollToElement('competences')" ngClass="nav-links">Compétences</a>
-            </li>
-            <li ngClass="nav-item">
-                <a (click)="scrollToElement('certifications')" ngClass="nav-links">Certifications</a>
-            </li>
-            <li ngClass="nav-item">
-                <a (click)="scrollToElement('team')" ngClass="nav-links">Equipe</a>
-            </li>
-            <li ngClass="nav-item">
-                <a (click)="scrollToElement('contact')" ngClass="nav-links nav-contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
+    <div ngClass="header-bottom" [style.top.px]="topValue">
+        <div ngClass="logo" id="secondaryLogo">
+            <img src="../../../assets/icons/logo.jpg" alt="Logo AV-Connexion" ngClass="logo-little">
+        </div>
+       
+        <nav ngClass="nav-bar" id="navBar">
+            <ul ngClass="nav-list">
+                <li ngClass="nav-item">
+                    <a (click)="scrollToElement('heroe')" ngClass="nav-links">Accueil</a>
+                </li>
+                <li ngClass="nav-item">
+                    <a (click)="scrollToElement('competences')" ngClass="nav-links">Compétences</a>
+                </li>
+                <li ngClass="nav-item">
+                    <a (click)="scrollToElement('certifications')" ngClass="nav-links">Certifications</a>
+                </li>
+                <li ngClass="nav-item">
+                    <a (click)="scrollToElement('team')" ngClass="nav-links">Equipe</a>
+                </li>
+                <li ngClass="nav-item">
+                    <a (click)="scrollToElement('contact')" ngClass="nav-links nav-contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
