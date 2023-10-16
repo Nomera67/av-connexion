@@ -12,5 +12,4 @@ export class NavbarComponent {
   scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId)
   }
-
 }
