@@ -1,13 +1,13 @@
-<header>
+<header id="heroe">
     <div ngClass="header-top">
-        <img src="../../../assets/icons/logo-test.png" alt="" ngClass="logo-big">
+        <img src="../../../assets/icons/logo-plein.png" alt="" ngClass="logo-big">
     </div>
-    <div ngClass="header-bottom">
-        <div ngClass="logo" [style.opacity]="opacity">
+    <div ngClass="header-bottom" [style.top.px]="topValue">
+        <div ngClass="logo" id="secondaryLogo">
             <img src="../../../assets/icons/logo.jpg" alt="Logo AV-Connexion" ngClass="logo-little">
         </div>
        
-        <nav ngClass="nav-bar">
+        <nav ngClass="nav-bar" id="navBar">
             <ul ngClass="nav-list">
                 <li ngClass="nav-item">
                     <a (click)="scrollToElement('heroe')" ngClass="nav-links">Accueil</a>

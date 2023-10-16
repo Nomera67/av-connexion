@@ -8,7 +8,8 @@ import { ViewportScroller } from '@angular/common';
 })
 export class NavbarComponent implements OnInit{
 
-  opacity: number = 0;
+  topValue: number = 100;
+  navBarClass: string = 'nav-bar-centered';
 
   ngOnInit(): void {
   }
@@ -23,24 +24,30 @@ export class NavbarComponent implements OnInit{
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
-    const headerBottom = this.elementRef.nativeElement.querySelector('.header-bottom') as HTMLElement;
+    const headerTop = this.elementRef.nativeElement.querySelector('.header-top') as HTMLElement;
+    const headerTopHeight = headerTop.offsetHeight;
+    const scrollPosition = window.pageYOffset;
+    const logo = document.getElementById('secondaryLogo');
+    const navBar = document.getElementById('navBar');
 
-
-    if(headerBottom){
-      const rect = headerBottom.getBoundingClientRect();
-      const topScreen = rect.top;
-      if (topScreen <= 0) {
-        headerBottom.style.position = 'fixed';
-        headerBottom.style.top = '0';
-      } else {
-        headerBottom.style.position = 'relative';
-      }
+    if (scrollPosition > headerTopHeight) {
+        navBar?.classList.add('righted');
+        logo?.classList.add('visible');
+        logo?.classList.remove('hidden');
+    } else {
+        navBar?.classList.remove('righted');
+        this.navBarClass = 'nav-bar-centered';
+        logo?.classList.add('hidden');
+        logo?.classList.remove('visible');
     }
 
+    if(headerTop){
+      const scrollPosition = window.pageYOffset;
 
-    const scrollPosition = window.pageYOffset;
-    const maxScroll = document.body.clientHeight - window.innerHeight;
-    const opacity = (scrollPosition / maxScroll) * 10;
-    this.opacity = opacity < 0 ? 0 : (opacity > 1 ? 1 : opacity);
+      this.topValue = headerTopHeight - scrollPosition;
+
+      if (this.topValue < 0){
+        this.topValue = 0;
+      }
   }
-}
+}}
