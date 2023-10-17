@@ -22,7 +22,8 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: $light-background;
+        background-color: #ffffff65;
+        backdrop-filter: blur(.3rem);
     }
 }
 

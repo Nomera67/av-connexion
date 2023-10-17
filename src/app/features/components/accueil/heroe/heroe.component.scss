@@ -1,8 +1,49 @@
+@use '../../../../../styles.scss' as *;
+
 .heroe{
     &-container{
         width: 100%;
         height: 97vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &-left{
+    }
+    &-cta{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        & > p{
+            font-size: 1.5rem;
+        }
+        & > h1{
+            font-size: 2.5rem;
+        }
+        & > button{
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: $light-background;
+            padding: 15px 25px;
+            border: 2px solid $main-color;
+            background-color: $main-color;
+            border-radius: 2rem;
+            transition: all .25s ease;
+            &:hover{
+                color: $main-color;
+                background-color: $light-background;
+            }
+        }
+
+    }
+    &-right{
         display: grid;
         place-items: center;
+        width: 50%;
+        & > img{
+            width: 50%;
+        }
     }
 }
