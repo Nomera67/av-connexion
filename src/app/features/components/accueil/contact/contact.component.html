@@ -1,34 +1,43 @@
 <div ngClass="contact-container" id="contact">
     <div ngClass="contact-left">
-        <h2>AV-Connexion</h2>
-        <p>2C Avenue de l'énergie</p>
-        <p>67800 Bischheim</p>
-        <address>contact@av-connexion.fr</address>
+        <div class="contact-informations">
+            <h2>AV-Connexion</h2>
+            <p>2C Avenue de l'énergie</p>
+            <p>67800 Bischheim</p>
+            <address>contact@av-connexion.fr</address>
+        </div>
+        <div class="contact-sociaux">
+            <p>Retrouvez-nous sur nos réseaux sociaux :</p>
+
+        </div>
     </div>
     <div ngClass="contact-right">
         <form action="#" method="post" ngClass="form">
             <div ngClass="form-item">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required><br><br>
+                <label for="nom">Nom *</label>
+                <input type="text" id="nom" name="nom" aria-label="nom" placeholder="Nom" required>
         
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required><br><br>    
+                <label for="prenom">Prénom *</label>
+                <input type="text" id="prenom" name="prenom" aria-label="prénom" placeholder="Prénom" required>    
             </div>
             <div ngClass="form-item">
-                <label for="email">Adresse mail :</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Adresse mail *</label>
+                <input type="email" id="email" name="email" aria-label="adresse email" placeholder="Adresse email" required>
         
-                <label for="telephone">Numéro de téléphone :</label>
-                <input type="tel" id="telephone" name="telephone" required><br><br>    
+                <label for="telephone">Numéro de téléphone *</label>
+                <input type="tel" id="telephone" name="telephone" aria-label="numéro de téléphone" placeholder="Numéro de téléphone" required> 
             </div>
             <div ngClass="form-item">
-                <label for="message">Message :</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>    
+                <label for="message">Message *</label><br>
+                <textarea id="message" name="message" rows="10" cols="70" aria-label="message" placeholder="Votre message..." required></textarea><br><br>    
             </div>
             <div ngClass="form-buttons">
                 <input type="submit" value="Envoyer">
                 <input type="reset" value="Réinitialiser">
             </div>            
-        </form>    
+        </form> 
+        <div ngClass="form-needed">
+            <p>* : Champs obligatoires</p>
+        </div>   
     </div>
 </div>
