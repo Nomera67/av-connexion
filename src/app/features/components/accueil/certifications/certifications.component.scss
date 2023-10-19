@@ -1,8 +1,61 @@
+@use '../../../../../styles.scss' as *;
+
 .certification{
     &-container{
+        padding: 200px 0;
         width: 100%;
-        height: 50vh;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
+    &-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    &-items{
+        cursor: pointer;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 10px 9px 18px 2px #000000;
+        position: relative;
+        &:hover > .certification-img{
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+    &-img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: grid;
+        place-content: center;
+        background-color: $light-background;
+        opacity: 1;
+        transition: .5s ease all;
+        & > img{
+            width: 100%;
+        }
+    }
+    &-text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0 10px;
+        & > h3 {
+            font-size: 1.1rem;
+        }
+    }
+
 }

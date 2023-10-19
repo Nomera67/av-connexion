@@ -8,6 +8,7 @@ import { CompetencesComponent } from './competences/competences.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImgDisplayComponent } from './competences/img-display/img-display.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ContactComponent } from './contact/contact.component';
     CompetencesComponent,
     CertificationsComponent,
     TeamComponent,
-    ContactComponent
+    ContactComponent,
+    ImgDisplayComponent
   ],
   imports: [
     CommonModule,
