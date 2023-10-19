@@ -1,8 +1,21 @@
 .certification{
     &-container{
+        padding: 200px 0;
         width: 100%;
-        height: 50vh;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    &-box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        & > img{
+            width: 150px;
+        }
     }
 }
