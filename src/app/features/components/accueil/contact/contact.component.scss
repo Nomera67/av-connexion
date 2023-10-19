@@ -7,7 +7,35 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: flex-start;
+        gap: 10%;
+    }
+    &-left{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
         align-items: center;
+    }
+    &-right{
+    }
+    &-title{
+        font-size: 1.2rem;
+    }
+    &-informations{
+        font-size: 1rem;
+        & > address {
+            font-style: normal;
+        }
+    }
+    &-sociaux{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    &-links{
+        & > img{
+            width: 32px;
+        }
     }
 }
 
