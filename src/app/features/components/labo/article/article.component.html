@@ -1,0 +1,11 @@
+<div ngClass="article-container">
+    <div ngClass="article-error" *ngIf="!article">
+        <p>Article introuvable</p>
+    </div>
+    <article ngClass="article" *ngIf="article">
+        <img ngClass="article-picture" src="{{article.picture}}" alt="">
+        <h2 ngClass="article-titre">{{article.title}}</h2>
+        <p ngClass="article-contenu">{{article.content}}</p>
+        <p ngClass="article-auteur">Article écrit par {{article.auteur}}</p>
+    </article>
+</div>
