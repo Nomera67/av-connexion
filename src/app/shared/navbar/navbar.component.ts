@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,11 +16,19 @@ export class NavbarComponent implements OnInit{
   }
 
 
-  constructor(private elementRef: ElementRef, private viewportScroller: ViewportScroller) {
+  constructor(private elementRef: ElementRef, private viewportScroller: ViewportScroller, private router: Router) {
   }
 
   scrollToElement(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId)
+    if (this.router.url !== '/accueil') {
+      this.router.navigate(['/accueil']).then(() => {
+        setTimeout(() => {
+          this.viewportScroller.scrollToAnchor(elementId);
+        }, 150);
+      });
+    } else {
+      this.viewportScroller.scrollToAnchor(elementId);
+    }
   }
 
   @HostListener('window:scroll', ['$event'])

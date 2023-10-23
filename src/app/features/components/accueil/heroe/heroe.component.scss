@@ -29,7 +29,6 @@
     }
     &-buttons{
         &-container{
-            // align-self: center;
             display: flex;
             flex-direction: row;
             gap: 15px;
@@ -62,8 +61,18 @@
         display: grid;
         place-items: center;
         width: 50%;
+        position: relative;
         & > img{
             width: 100%;
         }
+    }
+    &-blur{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: radial-gradient($main-color 0%, #ffffff 70%, #ffffff00 100%);
+        backdrop-filter: blur(2rem);
+        z-index: -1;
     }
 }

@@ -1,0 +1,29 @@
+[
+    {
+        "nom": "Léandre B.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptate expedita debitis ratione similique labore sint laborum a et nihil?",
+        "linkedin": "",
+        "github": "",
+        "instagram": "",
+        "twitter": "",
+        "picture": "../../../../../assets/profils/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
+    },
+    {
+        "nom": "Vincent P.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptate expedita debitis ratione similique labore sint laborum a et nihil?",
+        "linkedin": "",
+        "github": "",
+        "instagram": "",
+        "twitter": "",
+        "picture": "../../../../../assets/profils/robert-godwin-cdksyTqEXzo-unsplash (1).jpg"
+    },
+    {
+        "nom": "Yan R.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptate expedita debitis ratione similique labore sint laborum a et nihil?",
+        "linkedin": "",
+        "github": "",
+        "instagram": "",
+        "twitter": "",
+        "picture": "../../../../../assets/profils/georgi-kalaydzhiev-0huBcll6KUE-unsplash.jpg"
+    }
+]
