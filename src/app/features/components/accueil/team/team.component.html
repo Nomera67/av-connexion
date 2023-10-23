@@ -1,43 +1,13 @@
 <div ngClass="team-container" id="team">
     <h2>Notre équipe</h2>
     <div ngClass="team-group">
-        <div ngClass="team-item">
+        <div *ngFor="let member of members" ngClass="team-item">
             <div ngClass="team-photo">
-                <img src="../../../../../assets/profils/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="">
+                <img src={{member.picture}} alt="">
             </div>
             <div ngClass="team-text">
-                <h3>Léandre B.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptate expedita debitis ratione similique labore sint laborum a et nihil?</p>
-                <div ngClass="team-sociaux">
-                    <a href="#"><img src="../../../../../assets/icons/linkedin.png" alt=""></a>
-                    <a href="#"><img src="../../../../../assets/icons/facebook.png" alt=""></a>
-                    <a href="#"><img src="../../../../../assets/icons/twitter.png" alt=""></a>
-                    <a href="#"><img src="../../../../../assets/icons/instagram.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div ngClass="team-item">
-            <div ngClass="team-photo">
-                <img src="../../../../../assets/profils/robert-godwin-cdksyTqEXzo-unsplash (1).jpg" alt="">
-            </div>
-            <div ngClass="team-text">
-                <h3>Vincent P.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptate expedita debitis ratione similique labore sint laborum a et nihil?</p>
-                <div ngClass="team-sociaux">
-                    <a href="#"><img src="../../../../../assets/icons/linkedin.png" alt=""></a>
-                    <a href="#"><img src="../../../../../assets/icons/facebook.png" alt=""></a>
-                    <a href="#"><img src="../../../../../assets/icons/twitter.png" alt=""></a>
-                    <a href="#"><img src="../../../../../assets/icons/instagram.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div ngClass="team-item">
-            <div ngClass="team-photo">
-                <img src="../../../../../assets/profils/georgi-kalaydzhiev-0huBcll6KUE-unsplash.jpg" alt="">
-            </div>
-            <div ngClass="team-text">
-                <h3>Yan R.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptate expedita debitis ratione similique labore sint laborum a et nihil?</p>
+                <h3>{{member.nom}}</h3>
+                <p>{{member.description}}</p>
                 <div ngClass="team-sociaux">
                     <a href="#"><img src="../../../../../assets/icons/linkedin.png" alt=""></a>
                     <a href="#"><img src="../../../../../assets/icons/facebook.png" alt=""></a>
