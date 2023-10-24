@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class ArticlesHeroComponent implements OnInit {
 
   articles: any[] = [];
+  lastArticles: any[] = [];
   mainArticle: any;
 
   constructor(private http: HttpClient, public _router: Router){}
@@ -19,6 +20,7 @@ export class ArticlesHeroComponent implements OnInit {
       this.articles = data;
       this.articles.sort((a, b) => b.id - a.id);
       this.mainArticle = this.articles[0];
+      this.lastArticles = this.articles.slice(1, 4);
       console.log(this.articles)
     })
   }

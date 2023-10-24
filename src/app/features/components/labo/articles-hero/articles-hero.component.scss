@@ -3,52 +3,73 @@
 .articles{
     &-container{
         max-width: 1440px;
-        margin: 200px auto;
+        margin: 100px auto;
     }
     &-hero{
-        height: 500px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        gap: 20px;
     }
     &-highlighted{
         width: 100%;
-        height: 100%;
-        background-size: cover;
+        height: 500px;
+        background-size: 100%;
         background-repeat: no-repeat;
-        border-radius: 2rem 0 0 2rem;
+        background-position: center;
         position: relative;
         cursor: pointer;
+        transition: .5s all ease;
+        &:hover{
+            background-size: 110%;
+
+        }
     }
     &-description{
         position: absolute;
+        width: 100%;
         bottom: 0;
         left: 0;
-        border-radius: 0 0 0 2rem;
         padding: 20px;
         background-color: rgba(255, 255, 255, 0.599);
         backdrop-filter: 2rem;
     }
     &-list{
-        max-width: 20%;
+        width: 100%;
     }
     &-ul{
         height: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-evenly;
+        gap: 10px;
     }
     &-items{
         cursor: pointer;
-        height: 100%;
+        flex: 1;
+        height: 200px;
         display: flex;
         align-items: center;
+        text-align: center;
+        background-size: 100%;
+        background-position: center;
+        transition: .5s all ease;
+        &:hover{
+            background-size: 110%;
+            & > .articles-title{
+                backdrop-filter: grayscale(20%) blur(0rem);
+            }
+        }
+    }
+    &-title{
+        font-size: 1rem;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
         padding: 10px 20px;
-        background-color: #3c9eff;
-        &:not(:last-child){
-            border-bottom: 1px solid lightgray;
-        }
-        & > h3{
-            font-size: 1rem;
-        }
+        backdrop-filter: grayscale(100%) blur(0.2rem);
+        color: white;
+        text-shadow: 5px 5px 5px #000000, 5px 5px 10px #000000, 5px -5px 10px #000000, 5px -4px 10px #000000, -5px 5px 10px #000000;    
+        transition: .5s all ease;
     }
 }

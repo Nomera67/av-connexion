@@ -1,6 +1,6 @@
 <div ngClass="articles-container">
     <div ngClass="articles-hero" *ngIf="articles.length > 0">
-        <div ngClass="articles-highlighted" [style.background]="'url(' + articles[0].picture + ')'" (click)="toArticle(mainArticle.id)">
+        <div ngClass="articles-highlighted" [style.background-image]="'url(' + articles[0].picture + ')'" (click)="toArticle(mainArticle.id)">
             <div ngClass="articles-description">
                 <h2>{{ articles[0].title }} par {{ articles[0].auteur }}</h2>
                 <p>{{ articles[0].content | truncate: 100 }}...</p>
@@ -8,8 +8,10 @@
         </div>  
         <div ngClass="articles-list">
             <ul ngClass="articles-ul">
-                <li *ngFor="let article of articles.slice(1); let i = index" ngClass="articles-items" (click)="toArticle(article.id)">
-                    <h3>{{article.title}}</h3>
+                <li *ngFor="let article of lastArticles; let i = index" [style.background-image]="'url(' + article.picture + ')'" ngClass="articles-items" (click)="toArticle(article.id)">
+                    <div class="articles-title">
+                        <h3>{{article.title}}</h3>
+                    </div>
                 </li>
             </ul>
         </div>
