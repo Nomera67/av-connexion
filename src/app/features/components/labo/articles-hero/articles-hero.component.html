@@ -1,4 +1,4 @@
-<div ngClass="articles-container">
+<div ngClass="articles-container" id="laboratoire">
     <div ngClass="articles-hero" *ngIf="articles.length > 0">
         <div ngClass="articles-highlighted" [style.background-image]="'url(' + articles[0].picture + ')'" (click)="toArticle(mainArticle.id)">
             <div ngClass="articles-description">
