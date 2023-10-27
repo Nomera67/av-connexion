@@ -1,5 +1,8 @@
 <div ngClass="articles-container" id="laboratoire">
     <div ngClass="articles-hero" *ngIf="articles.length > 0">
+        <div ngClass="container-title">
+            <h2>Nos derniers articles :</h2>
+        </div>
         <div ngClass="articles-highlighted" [style.background-image]="'url(' + articles[0].picture + ')'" (click)="toArticle(mainArticle.id)">
             <div ngClass="articles-description">
                 <h2>{{ articles[0].title }} par {{ articles[0].auteur }}</h2>

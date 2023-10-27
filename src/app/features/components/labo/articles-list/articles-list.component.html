@@ -1,1 +1,15 @@
-<p>articles-list works!</p>
+<div ngClass="list-container">
+    <h2>Nos archives :</h2>
+    <div ngClass="list-articles" *ngIf="listArticles.length > 0">
+        <ul ngClass="list-items" >
+            <li ngClass="list-card" *ngFor="let article of listArticles; let i = index" [style.background-image]="'url(' + article.picture + ')'" (click)="toArticle(article.id)">
+                <div ngClass="list-title">
+                    <p>{{article.title}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div ngClass="list-error" *ngIf="listArticles.length === 0">
+        <p>Il n'y a plus aucun article à lire</p>
+    </div>
+</div>

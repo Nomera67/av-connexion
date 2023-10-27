@@ -21,7 +21,6 @@ export class ArticlesHeroComponent implements OnInit {
       this.articles.sort((a, b) => b.id - a.id);
       this.mainArticle = this.articles[0];
       this.lastArticles = this.articles.slice(1, 4);
-      console.log(this.articles)
     })
   }
 
