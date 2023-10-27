@@ -40,5 +40,40 @@
         "picture": "https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "auteur": "Emily Techster",
         "id": "6"
+    },
+    {
+        "title": "Création d'interfaces interactives : la magie d'HTML5",
+        "content": "Découvrez comment HTML5 a transformé la création d'interfaces interactives dans le domaine de l'audiovisuel. Les balises HTML5 ont ouvert de nouvelles possibilités pour les concepteurs multimédias, offrant des expériences plus immersives aux téléspectateurs.",
+        "picture": "https://images.pexels.com/photos/4424567/pexels-photo-4424567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "auteur": "Bill Linguiste",
+        "id": "7"
+    },
+    {
+        "title": "AMX vs Crestron : La bataille des systèmes de contrôle",
+        "content": "Une analyse comparative entre les systèmes de contrôle AMX et Crestron dans le contexte de l'audiovisuel. Découvrez les avantages et les inconvénients de chaque système pour les intégrateurs et les utilisateurs finaux.",
+        "picture": "https://images.pexels.com/photos/16037279/pexels-photo-16037279/free-photo-of-bois-ordinateur-portable-internet-ecrite.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "auteur": "Gérard Ytroblème",
+        "id": "8"
+    },
+    {
+        "title": "Les secrets de Crestron : Révolution dans l'audiovisuel",
+        "content": "Explorez les innovations de Crestron qui redéfinissent l'expérience audiovisuelle. Des systèmes de contrôle aux solutions de collaboration, Crestron est en première ligne pour offrir des environnements audiovisuels exceptionnels.",
+        "picture": "https://images.pexels.com/photos/3825569/pexels-photo-3825569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "auteur": "Sam Usé",
+        "id": "9"
+    },
+    {
+        "title": "L'art des interfaces HTML dans le cinéma",
+        "content": "L'utilisation créative d'interfaces HTML dans le monde du cinéma. Découvrez comment les cinéastes intègrent des éléments interactifs pour offrir des expériences cinématographiques uniques aux spectateurs.",
+        "picture": "https://images.pexels.com/photos/3943949/pexels-photo-3943949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "auteur": "Polly Gonale",
+        "id": "10"
+    },
+    {
+        "title": "L'avenir de l'audiovisuel : Vers une immersion totale",
+        "content": "Explorez les dernières tendances en matière d'audiovisuel, de la réalité virtuelle à la vidéo à 360 degrés. Plongez dans le futur de l'audiovisuel et découvrez comment la technologie transforme la narration visuelle.",
+        "picture": "https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "auteur": "Sarah Croché",
+        "id": "11"
     }
 ]
