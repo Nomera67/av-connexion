@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ArticlesRequestsService } from 'src/app/features/services/articles-requests.service';
 
 @Component({
   selector: 'app-articles-hero',
@@ -13,10 +13,10 @@ export class ArticlesHeroComponent implements OnInit {
   lastArticles: any[] = [];
   mainArticle: any;
 
-  constructor(private http: HttpClient, public _router: Router){}
+  constructor(private articlesService: ArticlesRequestsService, public _router: Router){}
 
   ngOnInit(): void {
-    this.http.get('assets/ressources/labo/articles-list.json').subscribe((data: any) => {
+    this.articlesService.getArticlesList().subscribe((data: any) => {
       this.articles = data;
       this.articles.sort((a, b) => b.id - a.id);
       this.mainArticle = this.articles[0];
