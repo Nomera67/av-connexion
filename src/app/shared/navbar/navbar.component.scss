@@ -49,17 +49,36 @@ header{
             color: $main-color;
         }
     }
+    &-item{
+        border-bottom: 2px solid transparent;
+        
+    }
     &-contact{
         color: $light-background;
         background-color: $main-color;
         padding: 7px 15px;
         border-radius: 2rem;
         border: 1px solid $main-color;
+        transition: .25s ease all;
         &:hover{
             color: $main-color;
             background-color: $light-background;
         }
     }
+}
+
+.active-contact{
+    border-bottom: 2px solid transparent;
+    & > a{
+        padding: 7px 15px;
+        border-radius: 2rem;
+        border: 1px solid transparent;
+        background-color: $main-color-verylight;
+    }
+}
+
+.active-link{
+    border-bottom: 2px solid $main-color;
 }
 
 .logo{

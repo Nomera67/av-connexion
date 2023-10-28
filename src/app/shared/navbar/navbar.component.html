@@ -9,22 +9,22 @@
        
         <nav ngClass="nav-bar" id="navBar">
             <ul ngClass="nav-list">
-                <li ngClass="nav-item">
+                <li ngClass="nav-item" [ngClass]="{'active-link': activeSection === 'heroe'}">
                     <a (click)="scrollToElement('heroe')" routerLink="/accueil" ngClass="nav-links">Accueil</a>
                 </li>
-                <li ngClass="nav-item">
-                    <a (click)="scrollToElement('competences')" fragment="competences" ngClass="nav-links">Compétences</a>
+                <li ngClass="nav-item" [ngClass]="{'active-link': activeSection === 'competences'}">
+                    <a (click)="scrollToElement('competences')" ngClass="nav-links">Compétences</a>
                 </li>
-                <li ngClass="nav-item">
+                <li ngClass="nav-item" [ngClass]="{'active-link': activeSection === 'certifications'}">
                     <a (click)="scrollToElement('certifications')" ngClass="nav-links">Certifications</a>
                 </li>
-                <li ngClass="nav-item">
+                <li ngClass="nav-item" [ngClass]="{'active-link': activeSection === 'team'}">
                     <a (click)="scrollToElement('team')" ngClass="nav-links">Equipe</a>
                 </li>
-                <li ngClass="nav-item">
+                <li ngClass="nav-item" [ngClass]="{'active-link': activeSection === 'laboratoire'}">
                     <a routerLink="/laboratoire" ngClass="nav-links">Labo</a>
                 </li>
-                <li ngClass="nav-item">
+                <li ngClass="nav-item" [ngClass]="{'active-contact': activeSection === 'contact'}">
                     <a (click)="scrollToElement('contact')" ngClass="nav-links nav-contact">Contact</a>
                 </li>
             </ul>

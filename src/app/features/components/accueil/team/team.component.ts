@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { TeamRequestService } from 'src/app/features/services/team-request.service';
 
 @Component({
   selector: 'app-team',
@@ -10,10 +10,10 @@ export class TeamComponent implements OnInit{
 
   members: any[] = [];
 
-  constructor(private http: HttpClient){}
+  constructor(private teamService: TeamRequestService){}
 
   ngOnInit(): void {
-    this.http.get('assets/ressources/team/team-list.json').subscribe((data: any) => {
+    this.teamService.getTeamList().subscribe((data: any) => {
       this.members = data;
     })
   }

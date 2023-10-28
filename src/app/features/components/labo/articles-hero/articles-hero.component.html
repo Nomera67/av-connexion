@@ -1,0 +1,25 @@
+<div ngClass="articles-container" id="laboratoire">
+    <div ngClass="articles-hero" *ngIf="articles.length > 0">
+        <div ngClass="container-title">
+            <h2>Nos derniers articles :</h2>
+        </div>
+        <div ngClass="articles-highlighted" [style.background-image]="'url(' + articles[0].picture + ')'" (click)="toArticle(mainArticle.id)">
+            <div ngClass="articles-description">
+                <h2>{{ articles[0].title }} par {{ articles[0].auteur }}</h2>
+                <p>{{ articles[0].content | truncate: 100 }}...</p>
+            </div>
+        </div>  
+        <div ngClass="articles-list">
+            <ul ngClass="articles-ul">
+                <li *ngFor="let article of lastArticles; let i = index" [style.background-image]="'url(' + article.picture + ')'" ngClass="articles-items" (click)="toArticle(article.id)">
+                    <div class="articles-title">
+                        <h3>{{article.title}}</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ngClass="articles-error" *ngIf="articles.length === 0">
+        <p>Il n'y a pas encore d'articles ici</p>
+    </div>
+</div>

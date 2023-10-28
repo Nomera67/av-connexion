@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,12 +11,53 @@ export class NavbarComponent implements OnInit{
 
   topValue: number = 100;
   navBarClass: string = 'nav-bar-centered';
-
-  ngOnInit(): void {
-  }
+  activeSection: string | null = null;
 
 
   constructor(private elementRef: ElementRef, private viewportScroller: ViewportScroller, private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.checkRouterAndScrollPosition();
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.checkRouterAndScrollPosition();
+  }
+
+  getOffset(elementId: string): number {
+    const element = document.getElementById(elementId);
+    return element ? element.offsetTop : 0;
+  }
+
+  checkRouterAndScrollPosition() {
+    if (this.router.url === '/laboratoire') {
+      this.activeSection = 'laboratoire';
+      console.log(this.activeSection);
+    } else if (this.router.url === '/accueil' && window.scrollY === 0) {
+      this.activeSection = 'heroe';
+      console.log(this.activeSection);
+    } else {
+      const scrollPosition = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      if (scrollPosition >= this.getOffset('contact') - windowHeight / 2) {
+        this.activeSection = 'contact';
+        console.log(this.activeSection);
+      } else if (scrollPosition >= this.getOffset('team') - windowHeight / 2) {
+        this.activeSection = 'team';
+        console.log(this.activeSection);
+      } else if (scrollPosition >= this.getOffset('certifications') - windowHeight / 2) {
+        this.activeSection = 'certifications';
+        console.log(this.activeSection);
+      } else if (scrollPosition >= this.getOffset('competences') - windowHeight / 2) {
+        this.activeSection = 'competences';
+        console.log(this.activeSection);
+      } else {
+        this.activeSection = 'heroe';
+        console.log(this.activeSection);
+      }
+    }
   }
 
   scrollToElement(elementId: string): void {
@@ -59,4 +100,6 @@ export class NavbarComponent implements OnInit{
         this.topValue = 0;
       }
   }
+
+  this.checkRouterAndScrollPosition();
 }}

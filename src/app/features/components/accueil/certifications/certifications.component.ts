@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CertificationRequestService } from 'src/app/features/services/certification-request.service';
 
 @Component({
   selector: 'app-certifications',
@@ -10,10 +10,10 @@ export class CertificationsComponent implements OnInit {
 
   certifications: any[] = [];
 
-  constructor(private http: HttpClient){}
+  constructor(private certificationsService: CertificationRequestService){}
 
   ngOnInit(): void {
-    this.http.get('assets/ressources/certifications/certifications-list.json').subscribe((data: any) => {
+    this.certificationsService.getCertificationsList().subscribe((data: any) => {
       this.certifications = data;
     })
 
