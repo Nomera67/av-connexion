@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { ArticlesRequestsService } from 'src/app/features/services/articles-requests.service';
 
 
 @Component({
@@ -12,13 +12,13 @@ export class ArticleComponent implements OnInit {
 
   article: any;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient){}
+  constructor(private route: ActivatedRoute, private articlesService: ArticlesRequestsService){}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const articleId = params['id'];
 
-      this.http.get(`assets/ressources/labo/articles-list.json`).subscribe((data: any) => {
+      this.articlesService.getArticlesList().subscribe((data: any) => {
         this.article = data.find((article: any) => article.id === articleId);
       })
     })
