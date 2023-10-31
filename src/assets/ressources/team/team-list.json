@@ -6,7 +6,7 @@
         "github": "",
         "instagram": "",
         "twitter": "",
-        "picture": "../../../../../assets/profils/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
+        "picture": "./assets/profils/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
     },
     {
         "nom": "Vincent P.",
@@ -15,7 +15,7 @@
         "github": "",
         "instagram": "",
         "twitter": "",
-        "picture": "../../../../../assets/profils/robert-godwin-cdksyTqEXzo-unsplash (1).jpg"
+        "picture": "./assets/profils/robert-godwin-cdksyTqEXzo-unsplash (1).jpg"
     },
     {
         "nom": "Yan R.",
@@ -24,6 +24,6 @@
         "github": "",
         "instagram": "",
         "twitter": "",
-        "picture": "../../../../../assets/profils/georgi-kalaydzhiev-0huBcll6KUE-unsplash.jpg"
+        "picture": "./assets/profils/georgi-kalaydzhiev-0huBcll6KUE-unsplash.jpg"
     }
 ]

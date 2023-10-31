@@ -1,27 +1,27 @@
 [
     {
         "nom": "Crestron",
-        "picture": "../../../../../assets/icons/crestron-logo.png",
+        "picture": "./assets/icons/crestron-logo.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas repudiandae sed et ratione corrupti vel labore dolorum voluptatum quisquam!"
     },
     {
         "nom": "Extron",
-        "picture": "../../../../../assets/icons/EXTRON.png.png",
+        "picture": "./assets/icons/EXTRON.png.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas repudiandae sed et ratione corrupti vel labore dolorum voluptatum quisquam!"
     },
     {
         "nom": "Kramer",
-        "picture": "../../../../../assets/icons/KRAMER-CONTROL.png.png",
+        "picture": "./assets/icons/KRAMER-CONTROL.png.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas repudiandae sed et ratione corrupti vel labore dolorum voluptatum quisquam!"
     },
     {
         "nom": "Sennheiser",
-        "picture": "../../../../../assets/icons/sennheiser-logo-vector-2.svg",
+        "picture": "./assets/icons/sennheiser-logo-vector-2.svg",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas repudiandae sed et ratione corrupti vel labore dolorum voluptatum quisquam!"
     },
     {
         "nom": "Harman",
-        "picture": "../../../../../assets/icons/Harman_Primary_Corporate_Logo_CMYK.png",
+        "picture": "./assets/icons/Harman_Primary_Corporate_Logo_CMYK.png",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptas repudiandae sed et ratione corrupti vel labore dolorum voluptatum quisquam!"
     }
 ]
